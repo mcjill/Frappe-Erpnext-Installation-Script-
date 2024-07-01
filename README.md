@@ -25,18 +25,18 @@ This script automates the installation of Frappe-ERPNext Version 15 on Ubuntu 22
 
 ## 💻 Installation
 
-1. Clone the repository or download the script:
+1. Clone the repository or download the script
    ```bash
    git clone https://github.com/your-repo/erpnext-installation-script.git
    cd erpnext-installation-script
    ```
 
-2. Make the script executable:
+2. Make the script executable
    ```bash
    chmod +x install_erpnext.py
    ```
 
-3. Run the script with sudo:
+3. Run the script with sudo
    ```bash
    sudo ./install_erpnext.py
    ```
