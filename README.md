@@ -1,9 +1,9 @@
 # 🚀 ERPNext Installation Script 🛠️
 
 - 👋 Hi, I'm Elliot Brenya Sarfo!
-- 📧 Email: [Your Email]
-- 🔗 LinkedIn: [Your LinkedIn]
-- 🐦 Twitter: [Your Twitter]
+- 📧 Email: elliotbrenyasarfo@gmail.com
+- 🔗 LinkedIn: https://www.linkedin.com/in/elliot-brenya-sarfo/
+- 🐦 Twitter: https://x.com/elliot_mlaidv
 
 This script automates the installation of Frappe-ERPNext Version 15 on Ubuntu 22.04 LTS. It ensures all dependencies are installed, configures the necessary services, and sets up ERPNext with specified versions of Node.js, npm, and yarn.
 
