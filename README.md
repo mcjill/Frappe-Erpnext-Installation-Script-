@@ -60,6 +60,7 @@ This script automates the installation of Frappe-ERPNext Version 15 on Ubuntu 22
 3. 🏁 After the script completes, you can start the ERPNext server using:
    ```bash
    cd ~/frappe-bench
+   chmod o+rx /home/user_name
    bench start
    ```
 
