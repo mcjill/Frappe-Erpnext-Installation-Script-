@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import subprocess
 import sys
@@ -25,7 +27,7 @@ def get_sudo_user():
     return os.environ.get('SUDO_USER')
 
 def main():
-    print_colored("Elliot Brenya Sarfo Frappe-ERPNext V15 Installation Script", Fore.GREEN)
+    print_colored("Elliot Brenya ERPNext Installation Script", Fore.GREEN)
     print_colored("========================================", Fore.GREEN)
 
     # Ensure script is run with sudo
@@ -88,6 +90,7 @@ default-character-set = utf8mb4
     print_colored("\nInstalling Node.js and Yarn", Fore.CYAN)
     run_command("curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -")
     run_command("apt-get install -y nodejs")
+    run_command("npm install -g yarn")
 
     # Install wkhtmltopdf
     print_colored("\nInstalling wkhtmltopdf", Fore.CYAN)
@@ -105,7 +108,12 @@ default-character-set = utf8mb4
     run_command(bench_init, as_user=sudo_user)
 
     # Change to frappe-bench directory
-    os.chdir(f"{home_dir}/frappe-bench")
+    frappe_bench_dir = os.path.join(home_dir, "frappe-bench")
+    if os.path.isdir(frappe_bench_dir):
+        os.chdir(frappe_bench_dir)
+    else:
+        print_colored(f"Directory {frappe_bench_dir} not found. Something went wrong with the bench init.", Fore.RED)
+        sys.exit(1)
 
     # Create a new site
     print_colored("\nCreating a new site", Fore.CYAN)
