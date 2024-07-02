@@ -30,13 +30,14 @@ This script automates the installation of Frappe-ERPNext Version 15 on Ubuntu 22
      git clone [https://github.com/mcjill/Frappe-Erpnext-Installation-Script-.git](https://github.com/mcjill/Frappe-Erpnext-Installation-Script-.git)
      cd Frappe-Erpnext-Installation-Script-
    ```
+2. Switch to unix_socket authentication [Y/n]  should be n
 
-2. Make the script executable
+3. Make the script executable
    ```bash
    chmod +x FRAPPE_ERPNEXT_installation_script.py
    ```
 
-3. Run the script with sudo
+4. Run the script with sudo
    ```bash
    sudo python3 ./FRAPPE_ERPNEXT_installation_script.py
    ```
